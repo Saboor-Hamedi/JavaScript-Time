@@ -1,0 +1,295 @@
+@import 'variables.scss';
+body{
+    margin: 0;
+    padding: 0;
+    height: map-get($body-color, height);
+    background: map-get($body-color, background);
+    background-position: center;
+    background-size: cover;
+  
+
+}
+// menu
+.nav-bar{
+    height: map-get($menu, height);
+    width: 0;
+    position: map-get($menu, position-fixed) ;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: map-get($menu, background-nav);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    ul{
+        list-style-type: none;
+        display: block;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+       li{
+           padding: 15px 20px;
+           transition: .5s;
+         
+           a{
+            color: white;
+            text-decoration: none;
+            transition-property: color;
+            transition-duration: 0.5s;
+            transition-timing-function:linear;
+            transition: 0.5s;
+            
+           }
+       }
+    }
+    a:hover{
+        color: rgb(161, 148, 148);       
+    }
+    .closebnt{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: white;
+        cursor: pointer;
+        background: map-get($menu, background-nav);
+        border: 2px solid white;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 50%;
+       
+    }
+}
+// this is for burger button
+.burger-back{
+    padding: 0;
+    margin: 0;
+    background: map-get($menu, background-nav);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    border: 2px  solid white;
+    position: relative;
+    top: 10px;
+    left: 5px;
+    cursor: pointer;
+    .burger{
+    color: white;
+   
+
+    }
+   
+  
+}
+
+// the section section-attachement image
+
+.section-attachement{
+    position: relative;
+    top: 50%;
+    max-width: 100%;
+    height: 100%;
+    background-image: map-get($attachment, image );
+    background-repeat: map-get($attachment, repeat);
+    background-attachment: map-get($attachment, fix);
+    background-size: map-get($attachment, size);
+    background-position: map-get($attachment, cover);
+    background-blend-mode: map-get($attachment, blend-mode);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 10px;
+
+   .titles{
+    background: map-get($attachment, back);
+        border-radius: 20px;
+        padding: 10px 25px;
+        text-align: center;
+        color: white;
+        font-size: 25px;
+      
+      
+   }   
+  
+}
+
+//    slider 
+.number-slides{
+ position: absolute;
+ top:65%;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+
+}
+  
+.number{
+    margin: 5px 10px;
+    
+    background: #033b52;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+    border: 1px solid white;
+}
+
+
+// time 
+.date{
+
+position: fixed;
+top: 10%;
+right: -260px;
+width: 300px;
+height: 50px;
+transition: .5s;
+// time button
+input.btn1 {
+    position: relative;
+    top: -3px;
+    left: -14px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red ;
+
+    cursor: pointer;
+   }
+   input.btn1:focus{
+      
+       border: none;
+       outline: none !important;
+      
+       
+      
+   }
+
+}
+
+.span-time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    background: map-get($menu, background-nav);
+    width: 230px;
+    height: 50px;
+    margin: 0px 0px;
+    padding:  0 10px;
+    
+}
+.default-panel{
+    position: relative;
+    background-color: white;
+    width: 110px;
+    height: 40px;
+    margin: 10px;
+    text-align: center;
+    line-height: 39px;
+    border-radius: 20px;
+    font-family: sans-serif;
+   
+}
+// feed back
+
+.feedback-section{
+    position: relative;
+    margin: auto;
+    top: 50%;
+    max-width: 1000px;
+    height: 60%;
+    background: map-get($menu, background-nav);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .row{
+        
+        margin-top: 1rem;
+      .contact{
+          margin: 0;
+          padding: 0;
+          color: white;
+          text-align: center;
+          font-size: 30px;
+          font-family: sans-serif;
+      }
+      .request{
+        margin: 0;
+        padding: 0;
+        color: white;
+        text-align: center;
+        font-size: 18px;
+        font-family: sans-serif;
+      }
+    }
+    input, textarea{
+       
+        width: 100%;
+        margin: 5px 0px;
+        padding: 10px 5px;
+        outline: none;
+        border: none;
+
+ 
+    }
+}
+
+textarea{
+    resize: none;
+    height: 150px;
+}
+
+.submit-button{
+    float: right;
+    padding: 10px 30px;
+    cursor: pointer;
+    outline: none;
+    background: #f3498e;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    color: white;
+    transition: .5s;
+}
+.submit-button:hover{
+    background: #a70b4b;
+}
+@media only screen and(max-width: 900px){
+    .feedback-section{
+        width: 80%;
+        height: 60%;
+        
+    }
+
+   
+}
+@media only screen and(max-width: 320px){
+    .feedback-section{
+        width: 100%;
+        height: 80%;
+        
+    }
+     h1, h2{
+     font-size: 20px;
+
+    }
+}
+@media only screen and(max-width: 200px){
+    .date{
+        width: 100%;
+    }
+    .feedback-section{
+     margin: 0;
+     padding: 0;
+     width: 100%;
+     
+    }
+}

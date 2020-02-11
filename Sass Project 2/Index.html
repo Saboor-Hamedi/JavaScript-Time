@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Full Screen</title>
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="./Awesome/css/all.css">
+</head>
+<body onload=display();>
+  
+    <div class="burger-back">
+        <span id="burgerbtn" class="burger" onclick="openNav()" ><i class="fas fa-bars"></i></span>
+    </div>
+        <div id="slide-nav" class="nav-bar">
+               <span class="closebnt" onclick="closeNav()"><i class="fas fa-times"></i></span>
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Address</a></li>
+                  <li><a href="#">Blogs</a></li>
+              </ul>
+        </div>
+        <section class="section-attachement">
+         <div class=" titles">
+            <h1 class="admin-h2">
+                Welcome to A' S High School
+            </h1>
+            <h2 class="admin-h2">Admin Saboor</h2>
+         </div>
+         <div class="number-slides">
+       <span class="one number" >1</span>
+       <span class="two number" >2</span>
+       <span class="three number" >3</span>
+       <span class="four number" >4</span>
+         </div>
+        
+        </section>
+       
+            <div class="date" id="date" >
+                <input type="checkbox" class="btn1"  id="btn1" onclick="timeFunction()">
+                <!-- <button type="checkbox" class="btn1"  id="btn1" onclick="timeFunction()">Click</button> -->
+           <span class="span-time">
+            <span class="hour default-panel" id="hour"></span>
+            <span class="minute  default-panel" id="minute"></span>
+            <span class="second default-panel" id="second"></span>
+           </span>
+            </div>
+   
+
+
+            <!-- feedback -->
+            <section class="feedback-section">
+
+        
+            <nav class="feedback">
+                <div class="row">
+                <h1 class="contact">Contact us</h1>
+                   <p class="request">Please let us know if you have any request</p>
+                    <input type="text" placeholder="First name" autocomplete="off" required>
+                   
+                    <input type="text" placeholder="Last name" autocomplete="off" required>
+                   
+                    <input type="email" placeholder="Your email" autocomplete="off" required>
+                    <textarea name="" placeholder="Write your message"></textarea>
+                    <button class="submit-button">Submit</button>
+                </div>
+            </nav>
+        </section>
+    <script>
+   function openNav() {
+      
+        document.getElementById("slide-nav").style.width = "100px";    
+}
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("slide-nav").style.width = "0px";    
+}
+
+// time 
+let isRunning = true;
+function timeFunction(){
+  
+if(document.getElementById('btn1').checked){
+
+    document.getElementById('date').style.right = "0px";
+} else {
+    document.getElementById('date').style.right = "-260px";
+}
+
+}
+  
+// this is time 
+function display(){
+const date = new Date();
+let hour = date.getHours() % 12;
+let min = date.getMinutes() ;
+let sec = date.getSeconds() +1;
+document.getElementById('hour').innerHTML = hour;
+document.getElementById('minute').innerHTML = min;
+document.getElementById('second').innerHTML = sec;
+Refreshing();
+}
+function Refreshing(){
+    let  refresh =1000;
+    mytime = setTimeout('display()', refresh);
+}
+    </script>
+</body>
+</html>

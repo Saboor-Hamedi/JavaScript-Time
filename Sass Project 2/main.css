@@ -1,0 +1,309 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(315deg, #0d75e4 0%, #e20799 100%);
+  background-position: center;
+  background-size: cover;
+}
+
+.nav-bar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(315deg, #0f5096 0%, #28313b 74%);
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar ul li {
+  padding: 15px 20px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.nav-bar ul li a {
+  color: white;
+  text-decoration: none;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.nav-bar a:hover {
+  color: #a19494;
+}
+
+.nav-bar .closebnt {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(315deg, #0f5096 0%, #28313b 74%);
+  border: 2px solid white;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+}
+
+.burger-back {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(315deg, #0f5096 0%, #28313b 74%);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  border: 2px  solid white;
+  position: relative;
+  top: 10px;
+  left: 5px;
+  cursor: pointer;
+}
+
+.burger-back .burger {
+  color: white;
+}
+
+.section-attachement {
+  position: relative;
+  top: 50%;
+  max-width: 100%;
+  height: 100%;
+  background-image: url("./Images/back1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-blend-mode: overlay;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+.section-attachement .titles {
+  background: -webkit-gradient(linear, left top, left bottom, from(#7e086a), to(#0c88a7));
+  background: linear-gradient(#7e086a, #0c88a7);
+  border-radius: 20px;
+  padding: 10px 25px;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+
+.number-slides {
+  position: absolute;
+  top: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 20px;
+}
+
+.number {
+  margin: 5px 10px;
+  background: #033b52;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  font-size: 30px;
+  border: 1px solid white;
+}
+
+.date {
+  position: fixed;
+  top: 10%;
+  right: -260px;
+  width: 300px;
+  height: 50px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.date input.btn1 {
+  position: relative;
+  top: -3px;
+  left: -14px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: red;
+  cursor: pointer;
+}
+
+.date input.btn1:focus {
+  border: none;
+  outline: none !important;
+}
+
+.span-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  float: right;
+  background: linear-gradient(315deg, #0f5096 0%, #28313b 74%);
+  width: 230px;
+  height: 50px;
+  margin: 0px 0px;
+  padding: 0 10px;
+}
+
+.default-panel {
+  position: relative;
+  background-color: white;
+  width: 110px;
+  height: 40px;
+  margin: 10px;
+  text-align: center;
+  line-height: 39px;
+  border-radius: 20px;
+  font-family: sans-serif;
+}
+
+.feedback-section {
+  position: relative;
+  margin: auto;
+  top: 50%;
+  max-width: 1000px;
+  height: 60%;
+  background: linear-gradient(315deg, #0f5096 0%, #28313b 74%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.feedback-section .row {
+  margin-top: 1rem;
+}
+
+.feedback-section .row .contact {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  font-family: sans-serif;
+}
+
+.feedback-section .row .request {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+.feedback-section input, .feedback-section textarea {
+  width: 100%;
+  margin: 5px 0px;
+  padding: 10px 5px;
+  outline: none;
+  border: none;
+}
+
+textarea {
+  resize: none;
+  height: 150px;
+}
+
+.submit-button {
+  float: right;
+  padding: 10px 30px;
+  cursor: pointer;
+  outline: none;
+  background: #f3498e;
+  border: none;
+  border-radius: 20px;
+  font-size: 18px;
+  color: white;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.submit-button:hover {
+  background: #a70b4b;
+}
+
+@media only screen and (max-width: 900px) {
+  .feedback-section {
+    width: 80%;
+    height: 60%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .feedback-section {
+    width: 100%;
+    height: 80%;
+  }
+  h1, h2 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 200px) {
+  .date {
+    width: 100%;
+  }
+  .feedback-section {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

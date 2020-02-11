@@ -1,0 +1,29 @@
+
+
+*{
+    box-sizing: border-box;
+    
+}
+ $body-color:(
+background-color: #485461,
+background: linear-gradient(315deg, #0d75e4 0%, #e20799 100%),
+height: 100vh,
+);
+// this for side menu bar
+
+$menu:(
+    background-nav: linear-gradient(315deg, #0f5096 0%, #28313b 74%),
+    height: 100%,
+    width: 0,
+    position-fixed:fixed, 
+);
+
+$attachment:(
+    image: url('./Images/back1.jpg'),
+    repeat: no-repeat,
+    fix: fixed,
+    size: cover,
+    position: cover,
+    blend-mode: overlay, 
+    back: linear-gradient(#7e086a, #0c88a7),
+)
